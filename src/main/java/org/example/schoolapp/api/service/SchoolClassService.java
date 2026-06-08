@@ -1,4 +1,4 @@
-package org.example.schoolapp.service;
+package org.example.schoolapp.api.service;
 
 
 import org.example.schoolapp.api.dto.CreateClassRequest;
@@ -6,15 +6,12 @@ import org.example.schoolapp.api.dto.SchoolClassDto;
 import org.example.schoolapp.api.model.Role;
 import org.example.schoolapp.api.model.SchoolClass;
 import org.example.schoolapp.api.model.User;
-import org.example.schoolapp.repository.SchoolClassRepository;
-import org.example.schoolapp.repository.UserRepository;
+import org.example.schoolapp.api.repository.SchoolClassRepository;
+import org.example.schoolapp.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-
-import static org.example.schoolapp.api.model.Role.TEACHER;
 
 @Service
 public class SchoolClassService {

@@ -1,4 +1,4 @@
-package org.example.schoolapp.repository;
+package org.example.schoolapp.api.repository;
 
 import org.example.schoolapp.api.model.SchoolClass;
 import org.springframework.data.jpa.repository.JpaRepository;

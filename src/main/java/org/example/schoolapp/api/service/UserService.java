@@ -1,13 +1,11 @@
-package org.example.schoolapp.service;
+package org.example.schoolapp.api.service;
 
 import org.example.schoolapp.api.model.Role;
 import org.example.schoolapp.api.model.User;
-import org.example.schoolapp.repository.UserRepository;
+import org.example.schoolapp.api.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import static org.example.schoolapp.api.model.Role.STUDENT;
 
 @Service
 public class UserService {

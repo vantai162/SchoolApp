@@ -1,18 +1,16 @@
 package org.example.schoolapp.api.controller;
 
 import org.example.schoolapp.api.dto.CreateClassRequest;
+import org.example.schoolapp.api.dto.EnrollStudentRequest;
 import org.example.schoolapp.api.dto.SchoolClassDto;
 import org.example.schoolapp.api.dto.StudentDto;
-import org.example.schoolapp.api.model.SchoolClass;
-import org.example.schoolapp.api.model.User;
-import org.example.schoolapp.service.EnrollmentService;
-import org.example.schoolapp.service.SchoolClassService;
-import org.example.schoolapp.service.UserService;
+import org.example.schoolapp.api.service.EnrollmentService;
+import org.example.schoolapp.api.service.SchoolClassService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class SchoolClassController {
@@ -47,4 +45,12 @@ public class SchoolClassController {
 
         return schoolClassService.createClass(request);
     }
+
+    @PostMapping("/classes/enroll")
+    public ResponseEntity<Void> enrollClass(@RequestBody EnrollStudentRequest request){
+        enrollmentService.enrollStudent(request);
+        return ResponseEntity.ok().build();
+    }
+
+
 }

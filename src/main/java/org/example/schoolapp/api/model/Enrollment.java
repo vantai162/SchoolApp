@@ -30,4 +30,16 @@ public class Enrollment {
     public User getStudent() {
         return student;
     }
+
+    public void setStudent(User student) {
+        this.student = student;
+    }
+
+    public void setSchoolClass(SchoolClass schoolClass){
+        this.schoolClass = schoolClass;
+    }
+
+    public void setEnrollmentDate(LocalDate now) {
+        enrollmentDate = now;
+    }
 }

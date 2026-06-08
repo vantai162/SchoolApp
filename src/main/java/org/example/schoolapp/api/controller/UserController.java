@@ -2,8 +2,9 @@ package org.example.schoolapp.api.controller;
 
 import org.example.schoolapp.api.model.Role;
 import org.example.schoolapp.api.model.User;
-import org.example.schoolapp.service.UserService;
+import org.example.schoolapp.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import java.util.List;
 public class UserController {
 
     private UserService userService;
+
 
     @Autowired
     public UserController(UserService userService){

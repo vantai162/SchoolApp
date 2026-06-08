@@ -1,4 +1,4 @@
-package org.example.schoolapp.repository;
+package org.example.schoolapp.api.repository;
 
 import org.example.schoolapp.api.model.Role;
 import org.example.schoolapp.api.model.User;
@@ -10,5 +10,6 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
     List<User> findByRole(Role role);
-
+    User findByEmail(String email);
+    boolean existsByEmail(String email);
 }
